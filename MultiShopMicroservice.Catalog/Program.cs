@@ -1,5 +1,4 @@
 using Microsoft.Extensions.Options;
-using MultiShopMicroservice.Catalog.Services.BaseService;
 using MultiShopMicroservice.Catalog.Services.CategoryServices;
 using MultiShopMicroservice.Catalog.Services.ProductDetailServices;
 using MultiShopMicroservice.Catalog.Services.ProductImageServices;
@@ -24,7 +23,6 @@ builder.Services.AddScoped<IProductImageService, ProductImageService>();
 
 // automapper entegrasyonu için;
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
-//builder.Services.AddAutoMapper(typeof());
 
 // appsettings teki db baðlantýsý bilgilerinin olduðu objeyi configure etmek için;
 builder.Services.Configure<DatabaseSettings>(builder.Configuration.GetSection("DatabaseSettings"));
